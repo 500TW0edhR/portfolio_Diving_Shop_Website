@@ -1,0 +1,482 @@
+@charset "utf8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yomogi", cursive;
+    overflow-x: hidden;
+}
+
+.gradation {
+    background: linear-gradient(220.55deg, #FFF500 0%, #FF00B8 100%);
+    background: -webkit-linear-gradient(220.55deg, #FFF500 0%, #FF00B8 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#wrapper {
+    width: 100vw;
+    /* lightblue to darkblue */
+    background: linear-gradient(to bottom, #ADD8E6, #00008B);
+
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+}
+
+#heroImage {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 calc(50% - 50vw);
+    background-image: url(../images/lp3top.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 65%;
+    z-index: -1;
+}
+
+#title {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+#title .gradation {
+    color: #eee;
+    font-size: 3rem;
+    text-align: center;
+    display: inline-block;
+}
+
+#subtitle {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 900;
+    /* 影を3重に指定 */
+    text-shadow: 1px 1px 0 #757575, 2px 2px 0 #E8E8E8, 3px 3px 0 #757575;
+    text-align: center;
+
+    padding: 10px 20px;
+    /* 銀色 */
+    background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    background: -webkit-linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 疑似要素がはみ出さないように */
+    overflow: hidden;
+    position: relative;
+}
+
+#subtitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* 初期位置を左端の外に */
+    width: 50%;
+    /* 光の帯の幅 */
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    /* 横方向のグラデーション */
+    transform: skewX(-20deg);
+    /* 少し斜めにする */
+    animation: shine-horizontal 2s infinite linear;
+    /* アニメーションを適用 */
+}
+
+@keyframes shine-horizontal {
+    0% {
+        left: -100%;
+
+    }
+
+    100% {
+        left: 100%;
+        /* 最終位置を右端の外に */
+    }
+}
+
+span {
+    color: red;
+}
+
+article {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+#upperContainer {
+    height: auto;
+}
+
+#upperContainer .left {
+    width: 100%;
+    height: auto;
+}
+
+#upperContainer .left h2 {
+    width: 100%;
+    color: #eee;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: teal;
+    border-radius: 30px;
+
+}
+
+#upperContainer .left p {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+#upperContainer .right {
+    width: 100%;
+    height: auto;
+}
+
+#upperContainer .right img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+#img1 {
+    width: 100%;
+    height: 100%;
+}
+
+#img2 {
+    width: 100%;
+    height: 100%;
+}
+
+#img3 {
+    width: 100%;
+    height: 100%;
+}
+
+#img4 {
+    width: 100%;
+    height: 100%;
+}
+
+#middleContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+#sectionTitle {
+    background: teal;
+    height: 150px;
+    font-size: 2.5rem;
+    padding: 10px;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.row {
+    height: auto;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 59% 40%;
+    gap: 10px;
+}
+
+.row .left {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row .right {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.row .right h2 {
+    color: #eee;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: teal;
+    border-radius: 30px;
+}
+
+.row .right p {
+    height: auto;
+    font-size: 1rem;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.row img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+}
+
+/* 奇数番目の .row 要素に対して左右を反転 */
+.row:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+#lowerContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    color: #eee;
+}
+
+#lowerContainer h2{
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    background: teal;
+    border-radius: 30px;
+}
+
+#infomations {
+    height: auto;
+}
+
+#informations .information {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.information dt {
+    width: 30%;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.information dt h3 {
+    font-size: 2rem;
+}
+
+.information dd {
+    width: 70%;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.information dd p {
+    font-size: 1.5rem;
+}
+
+
+#map {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 64% 35%;
+    gap: 10px;
+}
+
+.g-map {
+    width: 100%;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.g-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#map .description {
+    width: 100%;
+    height: auto;
+    color: #eee;
+}
+
+#map .description h2 {
+    color: #eee;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    margin-left: 10px;
+    background: teal;
+    border-radius: 30px;
+}
+
+#map .description p {
+    padding: 20px;
+}
+
+#map span {
+    color: #FFA500;
+}
+
+
+form {
+    max-width: 70%;
+    width: 80%;
+    padding: 2vw 4vw;
+    margin: 20px auto;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.8); /* #ccc */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+form legend {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    color: rgba(0, 0, 0, 0.9); /* #333 */
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 20px;
+    /* 各要素間のスペース */
+}
+
+form label {
+    /* ラベルをブロック要素にして見やすく */
+    display: block;
+    color: rgba(0, 0, 0, 0.9); /* #333 */
+    font-weight: 800;
+}
+
+label span {
+    color: red;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form select,
+form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.8); /* #ccc */
+    margin: 5px 0;
+    padding: 15px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.02); /* #f5f5f5 */
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+    /* 縦方向のリサイズを許可 */
+}
+
+form fieldset div {
+    margin-bottom: 10px;
+}
+
+form fieldset label {
+    display: inline;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.sends {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+form button {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    background: rgba(255, 83, 97, 1); /* #ff5361 */
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background-color: rgba(230, 71, 84, 1); /* #e64754 */
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.message {
+    height: 40px;
+    padding-top: 3px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.message.success {
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    text-align: center;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    text-align: center;
+    background-color: #e9ecef;
+    color: #383d41;
+    border: 1px solid #ced4da;
+}
+
+
+footer {
+    width: 100vw;
+    color: #eee;
+    margin: 0 calc(50% - 50vw);
+    background: teal;
+    text-align: center;
+}
+

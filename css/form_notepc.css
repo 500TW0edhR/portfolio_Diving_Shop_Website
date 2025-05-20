@@ -1,0 +1,243 @@
+@charset "utf8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.header {
+    position: relative;
+    width: 100VW;
+    height: 100px;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: background-color 1s;
+}
+
+.header:hover {
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background-color 1s;
+
+    h1,
+    p,
+    a {
+        color: #333;
+    }
+}
+
+.left a {
+    text-decoration: none;
+}
+
+.left a h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+.left a p {
+    color: #fff;
+}
+
+ul {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right li {
+    list-style: none;
+}
+
+.right li a {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+.right li a:hover {
+    color: blue;
+}
+/*===== headerここまで =====*/
+
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* videoの上にコンテンツを表示するため、z-indexを上げる */
+    z-index: 1;
+    /* form要素の基準 */
+    position: relative;
+}
+
+form {
+    max-width: 600px;
+    width: 90%;
+    padding: 2vw 4vw;
+    margin: 20px auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+form h3 {
+    color: rgba(0, 0, 0, 0.33); /* #555 */
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 15px;
+    /* 各要素間のスペース */
+}
+
+form label {
+    /* ラベルをブロック要素にして見やすく */
+    display: block;
+    color: rgba(0, 0, 0, 0.9); /* #333 */
+    font-weight: 800;
+}
+
+label span {
+    color: red;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.8); /* #ccc */
+    margin: 5px 0;
+    padding: 15px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.02); /* #f5f5f5 */
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+    /* 縦方向のリサイズを許可 */
+}
+
+form fieldset {
+    border: 1px solid rgba(0, 0, 0, 0.8); /* #ccc */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.9); /* #333 */
+}
+
+form fieldset div {
+    margin-bottom: 10px;
+}
+
+form fieldset label {
+    display: inline;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.sends {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+form button {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+    background: rgba(255, 83, 97, 1); /* #ff5361 */
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+form button:hover {
+    background-color: rgba(230, 71, 84, 1); /* #e64754 */
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.message {
+    height: 40px;
+    padding-top: 3px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.message.success {
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    text-align: center;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    text-align: center;
+    background-color: #e9ecef;
+    color: #383d41;
+    border: 1px solid #ced4da;
+}
+
+footer {
+    height: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+

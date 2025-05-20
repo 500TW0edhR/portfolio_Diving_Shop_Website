@@ -1,0 +1,269 @@
+@charset "utf8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 100vw;
+}
+
+#header {
+    width: 100VW;
+    height: 100px;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: background-color 1s;
+}
+
+.left a {
+    text-decoration: none;
+}
+
+.left a h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+.left a p {
+    color: #333;
+}
+
+.headerNav {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right li {
+    list-style: none;
+}
+
+.right li a {
+    font-size: 18px;
+    font-weight: 800;
+    color: #333;
+    text-decoration: none;
+}
+
+.right li a:hover {
+    /* color: blue; */
+    background: #9cd;
+}
+
+/*===== headerここまで =====*/
+
+#pageTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    background-color: #6002EE;
+    display: block;
+    text-align: center;
+    border-radius: 24px;
+}
+
+#pageTop::before {
+    content: '\f062';
+    font-family: 'Font Awesome 6 Free';
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 48px;
+}
+
+
+
+main {
+    width: 80%;
+    /* max-width: 100v; */
+    margin: 0 auto;
+}
+
+#title {
+    /* mainのmax-widthを無視して全画面表示 */
+    width: 100vw;
+    height: 350px;
+    margin: 0 calc(50% - 50vw);
+
+    background-image: url(../images/top2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#course h3 {
+    font-size: 2.2rem;
+}
+
+#course p {
+    font-size: 1.02rem;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+section h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section h4 {
+    font-size: 1.3rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+#c_card {
+    display: flex;
+    padding: 30px;
+}
+
+#c_card p { 
+    padding: 30px;
+}
+
+#depth {
+    margin-bottom: 30px;
+}
+
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: linear-gradient(45deg, #8EC5FC, #E0C3FC);
+}
+
+dt {
+    width: 25%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+dd {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+
+#transition {
+    width: 100vw;
+    height: 350px;
+    margin: 0 calc(50% - 50vw);
+    background-image: url(../images/middle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -1450px;
+}
+
+
+#training_flow {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#training_flow h3 {
+    font-size: 2rem;
+    margin: 50px;
+    padding: 20px;
+}
+
+.explain {
+    height: 280px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(45deg, #8EC5FC, #E0C3FC);
+    border-radius: 30px;
+}
+
+.explain h3 {
+    padding: 10px;
+    font-size: 1.5rem;
+    vertical-align: baseline;
+}
+
+.explain p {
+    padding: 20px;
+}
+
+.arrow {
+    width: 90px;
+    margin: 30px auto;
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    /* background: linear-gradient(45deg, #FA6900, #C02942); */
+    background: linear-gradient(45deg, #80D0C7, #0093E9);
+}
+
+.summarize {
+    margin: 100px 0;
+    padding: 20px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #8EC5FC, #E0C3FC);
+    /* background: linear-gradient(45deg, #80D0C7); */
+}
+
+.summarize h4 {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.summarize a {
+    color: "#000";
+    text-decoration: none;
+}
+
+
+footer {
+    height: 350px;
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+small {
+    color: #fff;
+}
+
