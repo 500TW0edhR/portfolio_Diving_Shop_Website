@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form_notepc.css">
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <video autoplay loop muted playsinline id="background-video">
+            <source src="inside_water.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+        <header class="header">
+            <div class="left">
+                <a href="index.html">
+                    <h1>Welcome to My Portfolio Sites</h1>
+                    <p>This website is a portfolio of meaningless code.</p>
+                </a>
+            </div>
+
+            <nav class="right">
+                <ul>
+                    <li><a href="#trial.html">体験ダイビングについて</a></li>
+                    <li><a href="license.html">ライセンス取得について</a></li>
+                    <li><a href="faq.html">ダイビングQ&A</a></li>
+                    <li><a href="form.html">contact us</a></li>
+                </ul>
+            </nav>
+        </header><!-- end of header -->
+
+        <div class="container">
+            <form>
+                <h1>Contact Form</h1>
+        
+                <div>
+                    <label for="write_name">名前:<span>(必須)</span></label>
+                    <input type="text" id="write_name" name="write_name" placeholder="山田 太郎" required>
+                </div>
+                <div>
+                    <label for="read_name">フリガナ:<span>(必須)</span></label>
+                    <input type="text" id="read_name" name="read_name" placeholder="ヤマダ タロウ" required>
+                </div>
+                <div>
+                    <label for="email">メールアドレス:<span>(必須)</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                </div>
+                <div>
+                    <label for="phone_number">電話番号:<span>(必須)</span></label>
+                    <input type="tel" id="phone_number" name="phone_number" placeholder="090-1234-5678" required>
+                </div>
+        
+                <fieldset>
+                    <legend>お問い合わせ内容を選択してください:</legend>
+                    <div>
+                        <input type="radio" id="inquiry_diving" name="inquiry_type" value="diving_experience">
+                        <label for="inquiry_diving">体験ダイビングについて</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="inquiry_license" name="inquiry_type" value="license">
+                        <label for="inquiry_license">ライセンス取得について</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="inquiry_tour" name="inquiry_type" value="diving_tour">
+                        <label for="inquiry_tour">ダイビングツアーについて</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="inquiry_other" name="inquiry_type" value="other">
+                        <label for="inquiry_other">その他</label>
+                    </div>
+                </fieldset>
+        
+                <div>
+                    <label for="inquiry_details">お問い合わせ内容:</label>
+                    <textarea id="inquiry_details" name="inquiry_details" rows="5" cols="50" placeholder="お問い合わせの詳細な内容"></textarea>
+                </div>
+                
+                <div class ="message"></div>
+
+                <div class="sends">
+                    <button type="submit">上記の内容で送信する</button>
+                    <button type="button" id="clearFormData">入力内容を消去</button>
+                </div>
+
+            </form>
+
+            
+        </div><!-- end of .container -->
+        <footer>
+            <small>Copyright &copy; 2025 Meaningless code.</small>
+        </footer>
+        
+    </div><!-- end of .wrapper -->
+    <script src="JavaScript/form.js"></script>
+</body>
+</html>
